@@ -1,0 +1,557 @@
+/*
+Theme Name: Twenty Twenty-Four Child
+Theme URI: https://wordpress.org/themes/twentytwentyfour-child/
+Template: twentytwentyfour-child
+Author: the WordPress team
+Author URI: https://wordpress.org
+Description: Twenty Twenty-Four is designed to be flexible, versatile and applicable to any website. Its collection of templates and patterns tailor to different needs, such as presenting a business, blogging and writing or showcasing work. A multitude of possibilities open up with just a few adjustments to color and typography. Twenty Twenty-Four comes with style variations and full page designs to help speed up the site building process, is fully compatible with the site editor, and takes advantage of new design tools introduced in WordPress 6.4.
+Tags: one-column,custom-colors,custom-menu,custom-logo,editor-style,featured-images,full-site-editing,block-patterns,rtl-language-support,sticky-post,threaded-comments,translation-ready,wide-blocks,block-styles,style-variations,accessibility-ready,blog,portfolio,news
+Version: 1.0.1702541483
+Updated: 2023-12-14 08:11:23
+
+*/
+
+
+
+.menu-bar {
+    display: flex; /* Utiliser Flexbox pour aligner les éléments horizontalement */
+}
+
+.menu-item {
+    flex: 0 0 auto; /* Empêcher les menus de s'étirer pour remplir l'espace disponible */
+    width: 260px; /* Définir une largeur fixe pour les menus */
+    margin-right: 20px; /* Ajouter un peu d'espace entre les menus */
+    border-radius: 8px; /* Ajouter des coins arrondis */
+    font-family: 'Space Mono', monospace; /* Utiliser la police Space Mono */
+    text-transform: uppercase; /* Convertir le texte en majuscules */
+    height: 43px;
+}
+
+
+.menu-item:last-child {
+    margin-left: auto; /* Déplacer le dernier élément vers la droite */
+}
+
+.menu-item:nth-child(1) {
+    margin-left: 360px; /* Ajouter un espace à droite du premier menu */
+    
+}
+
+.menu-item:nth-child(2) {
+    margin-left: 20px; /* Ajouter un espace à gauche du deuxième menu */
+}
+.menu-item:nth-child(3) {
+    margin-left: 340px; /* Ajouter un espace à gauche du deuxième menu */
+}
+
+.banner {
+    margin-bottom: 80px; /* Ajouter un espace vide en bas de la bannière */
+}
+.menu-bar {
+    margin-bottom: 40px; /* Ajouter un espace vide en dessous des menus */
+}
+
+
+
+
+
+
+
+
+/* Style pour les menus déroulants */
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.wrapper {
+    max-width: 1200px; /* Ajustez la largeur maximale selon vos besoins */
+    margin: 0 auto; /* Pour centrer le contenu */
+}
+
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ou toute autre méthode de distribution */
+    gap: 10px; /* Espacement entre les images */
+}
+
+.col {
+    width: calc(50% - 5px); /* Ajustez la largeur des colonnes en tenant compte de la marge */
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 5px; /* Espacement entre les lignes */
+}
+
+.col img {
+    width: 100%;
+    height: 500px; /* Hauteur fixe pour les images */
+    object-fit: cover; /* Redimensionner les images pour remplir complètement leur conteneur */
+}
+
+
+.banner img {
+    width: 100%;
+    display: block;
+}
+
+.banner {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.load-more {
+    display: flex;
+    justify-content: center;
+}
+#load-more-btn {
+    border: none; /* Enlever la bordure par défaut du bouton */
+    padding: 0; /* Enlever le padding par défaut */
+    background: none; /* Enlever l'arrière-plan par défaut */
+    cursor: pointer; /* Changer le curseur pour indiquer que c'est cliquable */
+}
+
+#load-more-img {
+    display: block; /* Assurer que l'image est affichée comme un bloc */
+    width: 100%; /* Ajuster la largeur de l'image pour qu'elle remplisse le bouton */
+    height: auto; /* Ajuster la hauteur de l'image automatiquement */
+}
+
+
+
+
+
+
+.image-container {
+    position: relative;
+}
+
+.btn-details {
+    position: absolute;
+    left: 50%; /* Pour centrer horizontalement */
+    bottom: 50%; /* Pour placer le bouton au milieu de l'image */
+    transform: translate(-50%, 50%); /* Pour ajuster le centrage horizontal et vertical */
+}
+
+
+.photo-link {
+    position: absolute;
+    top: 10px; /* Ajustez la position verticale pour descendre légèrement */
+    right: 15px; /* Positionner le bouton en haut à droite */
+}
+
+.btn-details img,
+.photo-link img {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+
+.col {
+    position: relative; /* Ajoutez une position relative à la colonne */
+}
+
+.col h3 {
+    position: absolute; /* Rendez le titre absolument positionné */
+    bottom: 0; /* Alignez le titre en bas */
+    left: 0; /* Alignez le titre à gauche */
+    margin: 0; /* Supprimez les marges par défaut */
+    padding: 10px; /* Ajoutez un peu de marge intérieure pour l'esthétique */
+    color: white; /* Changez la couleur du texte en blanc */
+    
+}
+
+
+/* LIGHTBOX */
+
+/* Ajout de styles pour la lightbox */
+/* ... (autres styles) ... */
+
+
+
+/* ... (autres styles) ... */
+
+
+.lightbox.active {
+    display: block; /* Afficher la lightbox lorsque activée */
+}
+
+/* Masquer les boutons et le titre par défaut */
+.btn-details,
+.photo-link,
+h3 {
+    display: none;
+}
+
+/* Positionnement de la catégorie en bas à droite et en blanc */
+.photo-category {
+    position: absolute;
+    bottom: 10px; /* Distance du bas */
+    right: 10px; /* Distance de la droite */
+    margin: 0;
+    padding: 10px;
+    color: white; /* Texte en blanc */
+    font-size: 16px; /* Taille de police */
+}
+
+/* css des fleches*/
+.custom-lightbox {
+    /* Autres styles... */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* css contact */ 
+
+#contact-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Space Mono', monospace;
+    position: fixed; /* Pour s'assurer que la popup est fixée par rapport à la fenêtre */
+    top: 0;
+    left: 0;
+    width: 100%; /* Assurer que la popup occupe toute la largeur de l'écran */
+    height: 100%; /* Assurer que la popup occupe toute la hauteur de l'écran */
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+    z-index: 9999; /* Placer la popup au-dessus des autres éléments */
+}
+
+#contact-popup .contact-form-container {
+    width: 100%; /* Faire en sorte que le conteneur prenne toute la largeur de la popup */
+    max-width: 600px; /* Définir une largeur maximale pour éviter que le formulaire ne devienne trop large */
+    background-color: #fff; /* Assurer que le fond est blanc */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; /* Inclure les bordures et les marges dans la largeur totale */
+    margin: 180px auto; /* Centrer le formulaire horizontalement */
+}
+
+#contact-popup .contact-form-container img {
+    width: 100%; /* Prendre toute la largeur disponible */
+    display: block; /* Supprimer l'espace en dessous de l'image */
+    margin: 0; /* Supprimer les marges par défaut */
+    padding: 0; /* Supprimer le padding par défaut */
+}
+#close-contact {
+    display: none;
+}
+
+/* Centrer les éléments du formulaire */
+.contact-form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form-container form p {
+    width: 100%; /* Assurer que les éléments prennent toute la largeur du conteneur */
+}
+
+.contact-form-container form input,
+.contact-form-container form textarea {
+    width: 100%; /* Prendre toute la largeur disponible */
+    max-width: 500px; /* Limiter la largeur à 500px */
+    box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur totale */
+    margin-bottom: 15px; /* Espacement entre les éléments */
+    padding: 10px; /* Espacement intérieur */
+    border-radius: 8px; /* Arrondir les bords */
+    border: 1px solid #ccc; /* Ajouter une bordure légère */
+}
+.contact-form-container form textarea {
+    height: 100px; /* Définir une hauteur pour les zones de texte */
+}
+
+#close-contact {
+    display: none;
+}
+.contact-form-container form input[type="submit"] {
+    border-radius: 0; /* Border radius à 0 */
+    text-transform: uppercase; /* Convertir le texte en majuscules */
+}
+
+.contact-form-container form input[type="submit"]:hover {
+    /* Style au survol du bouton */
+    background-color: #ccc; /* Exemple de changement de couleur de fond au survol */
+    color: #fff; /* Exemple de changement de couleur du texte au survol */
+}
+
+
+
+
+
+/* css de single photo contact*/
+.single-photo-content {
+    width: 100%;
+    max-width: 1190px;
+    margin: auto;
+    padding: 30px 20px 0;
+    font-family: 'Space Mono', monospace;
+}
+
+.single-photo-content h1 {
+    
+    font-style: italic;
+    font-weight: 400;
+    font-size: 66px;
+    line-height: 58px;
+    
+    padding: 0px 0;
+    word-break: break-word; /* Force le saut de ligne au mot si nécessaire */
+    
+
+}
+.photo-info p a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.separator {
+    height: 1px; /* Ajustez cette valeur pour réduire la hauteur */
+    margin: 120px 0; /* Ajustez cette valeur pour réduire l'espace autour */
+    background-color: #000; /* Assurez-vous que la couleur du séparateur est bien visible */
+}
+
+.separator-first {
+    height: 1px; /* Hauteur réduite de moitié */
+    margin: -17px 0; /* Ajuster l'espace autour si nécessaire */
+    background-color: #000; /* Couleur du séparateur */
+    width: 48%; /* Ajuster la largeur selon vos besoins */
+}
+/* Faire descendre légèrement le texte "Cette photo vous intéresse ?" avec le bouton "Contact" */
+.contact-section {
+    position: absolute;
+    margin-top: 120px; /* Ajuster la marge supérieure selon vos besoins */
+}
+
+/* Remonter légèrement le bloc contenant les informations */
+
+
+
+
+
+
+
+.single-photo-content h2 {
+    
+        font-family: 'Space Mono', monospace;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 26.66px;
+        letter-spacing: 0.1em;
+        text-align: left;
+    
+    
+}
+.photo-info p  {
+    text-transform: uppercase;
+}
+
+
+
+
+
+.photo-container {
+    position: relative;
+}
+
+.photo-container img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+.main-content {
+    display: flex;
+}
+
+.photo-description {
+    width: 50%;
+}
+
+.info {
+    width: 50%;
+}
+
+.photo-interest {
+    display: flex;
+    align-items: center;
+}
+
+.photo-interest-text {
+    margin-right: 20px; /* Espacement entre le texte et le bouton */
+}
+
+.contact-button {
+    margin-left: 50px; /* Espacement entre le texte et le bouton */
+    font-family: 'Space Mono', monospace;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.contact-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alignement avec espace entre les éléments */
+}
+
+
+.single-photo-content {
+    font-family: 'Space Mono', monospace;
+}
+
+body.front-page,
+.front-page * {
+    font-family: 'Space Mono', monospace;
+}
+
+.contact-button img {
+    display: block; /* Assure que l'image est un bloc pour le centrage */
+    margin: auto; /* Centre l'image horizontalement */
+    height: 40px; /* Ajuste cette valeur selon la hauteur désirée */
+}
+
+#additional-button img {
+    display: block; /* Assure que l'image est un bloc pour le centrage */
+    margin: auto; /* Centre l'image horizontalement */
+    height: 40px; /* Ajuste cette valeur selon la hauteur désirée */
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.main-content {
+    display: flex;
+    align-items: flex-end; /* Aligner le contenu en bas */
+}
+
+
+
+/* footer*/
+
+
+footer {
+    text-align: center; /* Centrer le contenu */
+    font-family: 'Space Mono', monospace; /* Police de caractères */
+    text-transform: uppercase; /* Mettre en majuscule */
+    padding: 20px; /* Ajouter un peu d'espace autour du contenu */
+    
+}
+
+.footer-content {
+    position: relative;
+}
+
+nav ul {
+    list-style: none; /* Supprimer les puces de la liste */
+    padding: 0; /* Supprimer le padding par défaut */
+}
+
+nav ul li {
+    display: inline-block; /* Afficher les éléments en ligne */
+    margin-right: 20px; /* Ajouter un peu d'espace entre les éléments */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Supprimer la marge à droite du dernier élément */
+}
+
+nav a {
+    text-decoration: none; /* Supprimer le soulignement des liens */
+    color: inherit; /* Utiliser la couleur par défaut du texte */
+}
+
+
+/* fleches */
+
+
+
+.thumbnail-preview {
+    display: none;
+    position: absolute;
+    top: 0; /* Positionner la miniature en haut */
+    left: 50%; /* Aligner la miniature au centre */
+    transform: translateX(-50%) translateY(-100%); /* Déplacer la miniature vers le haut */
+    z-index: 10;
+}
+
+.arrow:hover + .thumbnail-preview {
+    display: block;
+}
+
+
+
+
+
+
+.image-container {
+    position: relative;
+}
+
+.fullscreen-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Opacité à 80% */
+    z-index: 9999;
+    display: none; /* Initialement caché */
+}
+
+.fullscreen-content {
+    position: fixed;
+    top: 60%;
+    left: 75%;
+    transform: translate(-50%, -50%); /* Recentre la photo */
+    padding: 20px;
+    background-color: transparent; /* Définir le fond transparent */
+    z-index: 10000;
+    width: 100%; /* Utiliser la largeur totale de l'écran */
+    height: 100%; /* Utiliser la hauteur totale de l'écran */
+    box-sizing: border-box; /* Inclure le padding dans la largeur/hauteur */
+    overflow: auto; /* Activer le défilement si nécessaire */
+}
+
+
+#fullscreen-btn {
+    position: absolute;
+    top: 160px; /* Ajustez la valeur selon votre préférence */
+    right: 355px; /* Ajustez la valeur selon votre préférence */
+    z-index: 1000;
+    background: none; /* Supprime le fond */
+    border: none; /* Supprime la bordure */
+    padding: 0; /* Supprime le remplissage */
+}
+
+
